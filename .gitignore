@@ -1,0 +1,10 @@
+db.sqlite3
+migrations
+.vscode/
+my_env/
+__pycache__/
+/__pycache__/
+*.cache
+
+*.pyc
+*.pyo
