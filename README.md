@@ -8,9 +8,7 @@ EchoShare is a simple article-posting platform developed with django following M
 ## Running the project
 
 ### prerequisites
-- Python 3.13.3+
-- git
-- venv
+
 
 ```bash
 # Clone repostory
