@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django_ckeditor_5',
 ]
 
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -110,6 +112,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILE_DIRS = [os.path.join(BASE_DIR, 'static')]
+#STATICFILES_DIRS = [  
+#    BASE_DIR / "static",  
+#]  
+
 
 MEDIA_URL = '/media/'
 

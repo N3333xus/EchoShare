@@ -1,0 +1,36 @@
+/* Efeitos Cyberpunk */
+.glow {
+    text-shadow: 0 0 15px #40e07d;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #40e07d; }
+    to { text-shadow: 0 0 20px #40e07d, 0 0 30px #40e07d; }
+}
+
+.post-link {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none!important;
+}
+
+.post-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px #40e07d33;
+}
+
+.btn-outline-success {
+    border-color: #40e07d!important;
+    color: #40e07d!important;
+}
+
+.btn-outline-success:hover {
+    background-color: #40e07d!important;
+    color: #000!important;
+    box-shadow: 0 0 10px #40e07d;
+}
+
+.card {
+    background: #001100!important;
+    border: 1px solid #40e07d!important;
+}

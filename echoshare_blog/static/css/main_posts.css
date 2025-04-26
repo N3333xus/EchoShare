@@ -1,0 +1,34 @@
+.cyber-text {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.cyber-text h2 {
+    border-left: 3px solid #40e07d;
+    padding-left: 1rem;
+    margin: 2rem 0;
+}
+
+.cyber-text pre {
+    background: #001a00;
+    border: 1px solid #40e07d;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.cyber-text code {
+    color: #40e07d;
+    background: #001a00;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.glow {
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #40e07d; }
+    to { text-shadow: 0 0 20px #40e07d, 0 0 30px #40e07d; }
+}
