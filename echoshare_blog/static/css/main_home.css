@@ -1,44 +1,65 @@
-/* Efeito Glow */
-.glow {
-    text-shadow: 0 0 15px #40e07d;
-    animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-    from { text-shadow: 0 0 10px #40e07d; }
-    to { text-shadow: 0 0 20px #40e07d, 0 0 30px #40e07d; }
-}
-
-/* Estilização personalizada */
-.nav-link {
-    transition: all 0.3s ease!important;
+:root {
+    --primary-color: #40e07d;
+    --secondary-color: #6c757d;
+    --hover-color: #34b467;
+    --background-color: #f8f9fa;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    color: var(--primary-color) !important;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-brand:hover {
+    color: var(--hover-color) !important;
+  }
+  
+  .nav-link {
+    color: var(--secondary-color) !important;
+    font-weight: 500;
     position: relative;
-}
-
-.nav-link:hover {
-    transform: scale(1.1);
-    text-shadow: 0 0 10px #40e07d;
-}
-
-.nav-link::after {
+    margin: 0 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: var(--primary-color) !important;
+  }
+  
+  .nav-link::after {
     content: '';
     position: absolute;
+    bottom: -2px;
+    left: 0;
     width: 0;
     height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #40e07d;
+    background-color: var(--primary-color);
     transition: width 0.3s ease;
-}
-
-.nav-link:hover::after {
+  }
+  
+  .nav-link:hover::after {
     width: 100%;
-}
-
-pre {
-    font-size: 0.6rem;
-    background-color: #001a00!important;
-    border: 1px solid #40e07d!important;
-    padding: 1rem!important;
-}
-
+  }
+  
+  .footer {
+    margin-top: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-nav {
+      padding-top: 1rem;
+    }
+    
+    .nav-link {
+      margin: 8px 0;
+    }
+  }

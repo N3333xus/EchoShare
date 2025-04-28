@@ -1,54 +1,74 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EchoShare | About</title>
-
-    <link rel="stylesheet" href="{% static '/css/main_home.css' %} ">
-    <link rel="stylesheet" href="{% static '/css/main_posts.css' %} ">
-
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'favicons/site.webmanifest' %}">
 </head>
-<body TEXT=#40e07d LINK=#40e07d ALINK=#40e07d VLINK=#40e07d>
+<body class="d-flex flex-column min-vh-100">
 
-  <div class="top-nav">
-      <div class="art">
-
-      </div>
-
-      <div class="titulo-pagina">
-        <p>
-      Neurobunker
-        </p> 
-      </div>
-   
-    </div>
-    <div class="navbar">
-      <div class="home">
-            <a href="/">Home</a>
-      </div>
-        
-      <div class="articles">
-            <a href="/articles/">Articles</a>
-      </div>
-    
-      <div class="about">
-        <a href="/about/">About</a>
+      <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="/">EchoShare</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/articles/">Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about/">About</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
 
-    </div>
-  </div>
-  
-  <hr style="border-color: #40e07d;">
-  <div class="Bio">
-    <p>{{ about_update.about_text|safe }} </p>
-  </div>
-  
- </body>
+    <!-- Conteúdo Principal (mesma estrutura da home) -->
+    <main class="container my-5 flex-grow-1">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="card border-0 shadow">
+                    <div class="card-body p-4 p-md-5">
+                        <div class="text-muted lh-base">
+                            {{ about_update.about_text|safe }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (idêntico à home) -->
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <a href="/privacy/" class="text-secondary text-decoration-none">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
