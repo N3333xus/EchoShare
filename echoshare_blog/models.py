@@ -23,8 +23,6 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-
-
 class About(models.Model):
     title = models.CharField(max_length=255, null=True)
     about_text = CKEditor5Field('Text', config_name='extends')
