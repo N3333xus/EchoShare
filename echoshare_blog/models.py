@@ -37,7 +37,6 @@ class About(models.Model):
             if self.pk:
                 super().save(*args, **kwargs)
             else:
-
                 raise Exception("Only one instance of About is allowed.")
 
     def __str__(self):

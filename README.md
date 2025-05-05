@@ -4,7 +4,6 @@ EchoShare is a simple article-posting platform developed with django following M
 
 ## Features
 
-
 ## Running the project
 
 ### prerequisites

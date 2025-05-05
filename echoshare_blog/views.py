@@ -6,7 +6,8 @@ from django.conf import settings
 from django.core.files.storage import default_storage
 
 def home(request):
-    return render(request, 'index.html')
+    latest_posts = Post.objects.all().order_by('-date_posted')[:3] 
+    return render(request, 'index.html', {'latest_posts': latest_posts})
 
 def upload_file(request):
     if request.method == 'POST' and request.FILES.get('upload'):

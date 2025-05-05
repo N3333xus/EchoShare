@@ -6,10 +6,6 @@ from django.conf import settings
 
 from echoshare_blog import views
 
-#urlpatterns = [
- #   path('admin/', admin.site.urls),
-#]
-
 urlpatterns = [
     path('admin/', 
     admin.site.urls),
