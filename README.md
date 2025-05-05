@@ -1,8 +1,12 @@
 # EchoShare
 
-EchoShare is a simple article-posting platform developed with django following MVT(Model-View-Template) architecture.
+EchoShare is a simple article-posting platform built with Django, following the MVT (Model-View-Template) architecture.
 
 ## Features
+
+- CRUD operations for articles via Django Admin.
+- Article editing with CKEditor5.
+- Image upload support for article covers.
 
 ## Running the project
 
@@ -30,11 +34,11 @@ pip install -r requirements.txt
 python manage.py makemigrations
 python manage.py migrate
 
-# Create superuser
+# Create a superuser
 
 python manage.py createsuperuser
 
-# Start development server
+# Start the development server
 
 python manage.py runserver
 ```
