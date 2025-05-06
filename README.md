@@ -42,4 +42,7 @@ python manage.py createsuperuser
 
 python manage.py runserver
 ```
+![image](https://github.com/user-attachments/assets/fb51412c-f1cd-40f8-b179-da5077de0182)
+
+
 
